@@ -1,0 +1,2032 @@
+Prepared by: AJM  
+KTSS 
+ 63 2.7: Using JavaScript in HTML  
+2.7.1: Description of JavaScript in HTML  
+● HTML events  
+HTML events in JavaScript refer to actions or occurrences that can be detected and responded 
+to by JavaScript code within an HTML document.  
+These events are triggered by user interactions, changes in the document, or specific browser 
+actions.  
+JavaScript code can be used to listen for these events and execute custom logic or perform 
+actions in response.  
+In JavaScript, there are numerous event types that can be used to detect and respond to 
+specific actions or occurrences within an HTML document.  
+These event types cover a wide range of user interactions, changes in the document, or specific 
+browser actions. HTML events are "things" that happen to HTML elements.  
+Window Event Attributes  
+Events triggered for the window object (applies to the <body> tag):  
+Attribute  Value  Description  
+onafterprint  Script  Script to be run after the document is printed  
+onbeforeprint  script  Script to be run before the document is printed  
+onbeforeunload  script  Script to be run when the document is about to 
+be unloaded  
+onerror  script  Script to be run when an error occurs  
+onhashchange  script  Script to be run when there has been changes to 
+the anchor part of a URL  
+onload  script  Fires after the page is finished loading  
+Onmessage  script  Script to be run when the message is triggered  
+onoffline  script  Script to be run when the browser starts to work 
+offline 
+ononline  script  Script to be run when the browser starts to work 
+online 
+Onpagehide  script  Script to be run when a user navigates away 
+from a page  
+onpageshow  script  Script to be run when a user navigates to a 
+page 
+Prepared by: AJM  
+KTSS 
+ 64 Onpopstate  script  Script to be run when the window's history 
+changes 
+onresize  script  Fires when the browser window is resized  
+Onstorage  script  Script to be run when a Web Storage area is 
+updated 
+onunload  script  Fires once a page has unloaded (or the browser 
+window has been closed)  
+Form Events  
+These events are related to form elements and form submission.  
+Events triggered by actions inside a HTML form (applies to almost all HTML elements, but is 
+most used in form elements):  
+Attribute  Value  Description  
+onblur  script  Fires the moment that the element loses focus  
+onchange  script  Fires the moment when the value of the element is 
+changed 
+oncontextmen u  script  Script to be run when a context menu is triggered  
+onfocus  script  Fires the moment when the element gets focus  
+oninput  script  Script to be run when an element gets user input  
+oninvalid  script  Script to be run when an element is invalid  
+onreset  script  Fires when the Reset button in a form is clicked  
+onsearch  script  Fires when the user writes something in a search 
+field (for <input="search">)  
+onselect  script  Fires after some text has been selected in an 
+element 
+onsubmit  script  Fires when a form is submitted  
+ 
+ 
+Keyboard Events:  
+These events are triggered when the user interacts with the keyboard.  
+Attribute  Value  Description  
+onkeydown  Script  Fires when a user is pressing a key  
+Prepared by: AJM  
+KTSS 
+ 65 onkeypress  Script  Fires when a user presses a key  
+onkeyup  Script  Fires when a user releases a key  
+ 
+Mouse Events: These events are triggered by mouse-related actions.  
+Attribute  Value  Description  
+onclick  script  Fires on a mouse click on the element  
+ondblclick  script  Fires on a mouse double -click on the 
+element 
+onmousedown  script  Fires when a mouse button is pressed down 
+on an element  
+onmousemove  script  Fires when the mouse pointer is moving 
+while it is over an element  
+onmouseout  script  Fires when the mouse pointer moves out of 
+an element  
+onmouseover  script  Fires when the mouse pointer moves over 
+an element  
+onmouseup  script  Fires when a mouse button is released over 
+an element  
+Onmousewheel  script  Deprecated. Use the onwheel attribute 
+instead 
+onwheel  script  Fires when the mouse wheel rolls up or 
+down over an element  
+ 
+Drag Events  
+Attribute  Value  Description  
+ondrag  script  Script to be run when an element is dragged  
+ondragend  script  Script to be run at the end of a drag operation  
+ondragenter  script  Script to be run when an element has been 
+dragged to a valid drop target  
+ondragleave  script  Script to be run when an element leaves a valid 
+drop target  
+ondragover  script  Script to be run when an element is being 
+dragged over a valid drop target  
+Prepared by: AJM  
+KTSS 
+ 66 ondragstart  script  Script to be run at the start of a drag operation  
+ondrop  script  Script to be run when dragged element is being 
+dropped 
+onscroll  script  Script to be run when an element's scrollbar is 
+being scrolled  
+Clipboard Events  
+Attribute  Value  Description  
+oncopy  Script  Fires when the user copies the content of an element  
+oncut  Script  Fires when the user cuts the content of an element  
+onpaste  Script  Fires when the user pastes some content in an 
+element 
+ 
+Media Events  
+Events triggered by medias like videos, images and audio (applies to all HTML elements, but 
+is most common in media elements, like <audio>, <embed>, <img>, <object>, and 
+<video>).  
+Attribute  Value  Description  
+Onabort  Script  Script to be run on abort  
+Oncanplay  Script  Script to be run when a file is ready to 
+start playing (when it has buffered 
+enough to begin)  
+oncanplaythro ugh  Script  Script to be run when a file can be 
+played all the way to the end without 
+pausing for buffering  
+oncuechange  Script  Script to be run when the cue changes 
+in a <track> element  
+ondurationcha nge  Script  Script to be run when the length of the 
+media changes  
+Onemptied  Script  Script to be run when something bad 
+happens and the file is suddenly 
+unavailable (like unexpectedly 
+disconnects)  
+Onended  Script  Script to be run when the media has 
+reach the end (a useful event for 
+messages like "thanks for listening")  
+Prepared by: AJM  
+KTSS 
+ 67 Onerror  Script  Script to be run when an error occurs 
+when the file is being loaded  
+onloadeddata  Script  Script to be run when media data is 
+loaded 
+onloadedmeta data  Script  Script to be run when meta data (like 
+dimensions and duration) are loaded  
+onloadstart  Script  Script to be run just as the file begins 
+to load before anything is actually 
+loaded 
+Onpause  Script  Script to be run when the media is 
+paused either by the user or 
+programmatically  
+Onplay  Script  Script to be run when the media is 
+ready to start playing  
+Onplaying  Script  Script to be run when the media 
+actually has started playing  
+Onprogress  Script  Script to be run when the browser is in 
+the process of getting the media data  
+onratechange  Script  Script to be run each time the 
+playback rate changes (like when a 
+user switches to a slow motion or fast 
+forward mode)  
+Onseeked  Script  Script to be run when the seeking 
+attribute is set to false indicating that 
+seeking has ended  
+Onseeking  Script  Script to be run when the seeking 
+attribute is set to true indicating that 
+seeking is active  
+Onstalled  Script  Script to be run when the browser is 
+unable to fetch the media data for 
+whatever reason  
+Onsuspend  Script  Script to be run when fetching the 
+media data is stopped before it is 
+completely loaded for whatever 
+reason 
+Ontimeupdate  Script  Script to be run when the playing 
+position has changed (like when the 
+Prepared by: AJM  
+KTSS 
+ 68 user fast forwards to a different point 
+in the media)  
+onvolumechan ge  Script  Script to be run each time the volume is 
+changed which (includes setting the 
+volume to "mute")  
+Onwaiting  Script  Script to be run when the media has 
+paused but is expected to resume (like 
+when the media pauses to buffer more 
+data) 
+ 
+Misc Events  
+Attribute  Value  Description  
+ontoggle  script  Fires when the user opens or closes the <details> element  
+ 
+● JavaScript HTML event listener  
+In JavaScript, an event listener is a function that is attached to an HTML element to listen for a 
+specific event and execute custom code in response.  
+Event listeners provide a flexible and powerful way to handle events in JavaScript, allowing 
+developers to add interactivity and responsiveness to web pages.  
+The addEventListener() method  
+The addEventListener() method attaches an event handler to the specified element. It attaches 
+an event handler to an element without overwriting existing event handlers. You can add many 
+event handlers to one element.  
+You can add many event handlers of the same type to one element, i.e two "click" events.  
+You can add event listeners to any DOM (Document Object Model)  object not only HTML 
+elements. i.e the window object.  
+The addEventListener() method makes it easier to control how the event reacts to bubbling.  
+When using the addEventListener() method, the JavaScript is separated from the HTML 
+markup, for better readability and allows you to add event listeners even when you do not 
+control the HTML markup. You can easily remove an event listener by using the 
+removeEventListener() method.  
+The first parameter is the type of the event (like "click" or "mousedown" or any other HTML 
+DOM Event.)  
+The second parameter is the function we want to call when the event occurs. The third 
+parameter is a boolean value specifying whether to use event bubbling or event capturing. 
+This parameter is optional.  
+Prepared by: AJM  
+KTSS 
+ 69 Note that you don't use the "on" prefix for the event; use "click" instead of "onclick". The 
+`addEventListener()` method is a built-in JavaScript method that allows you to attach an event 
+listener to an HTML element. It enables you to specify a function to be executed when a 
+specific event occurs on the element.  
+Here's how `addEventListener()` works:  
+element.addEventListener(eventType, eventHandler, useCapture); Parameters:  
+- eventType: A string that specifies the type of event to listen for, such as "click",  
+"keydown", "submit", etc.  
+- `eventHandler`: The function to be executed when the specified event occurs.  
+- useCapture (optional): A boolean value that determines whether to use event  
+capturing (true) or event bubbling (false, default behavior). This parameter is often  
+omitted. 
+● Add Many Event Handlers to the Same Element  
+The addEventListener() method allows you to add many events to the same element, without 
+overwriting existing events:  
+Add an Event Handler to the window Object  
+The addEventListener() method allows you to add event listeners on any HTML DOM object 
+such as HTML elements, the HTML document, the window object, or other objects that support 
+events, like the xmlHttpRequest object.  
+● Event Bubbling or Event Capturing?  
+There are two ways of event propagation in the HTML DOM, bubbling and capturing. Event 
+propagation is a way of defining the element order when an event occurs.  
+If you have a <p> element inside a <div> element, and the user clicks on the <p> element, 
+which element's "click" event should be handled first? In bubbling the innermost element's event 
+is handled first and then the outer: the <p> element's click event is handled first, then the 
+<div> element's click event.  
+In capturing the outermost element's event is handled first and then the inner: the <div> 
+element's click event will be handled first, then the <p> element's click event. With the 
+addEventListener() method you can specify the propagation type by using the "useCapture" 
+parameter.  
+● The removeEventListener() method  
+The removeEventListener() method in JavaScript is used to remove an event listener that has 
+been previously attached to an HTML element using the addEventListener() method. It allows 
+you to detach a specific event handler function from an element, preventing it from being 
+executed when the specified event occurs.  
+Prepared by: AJM  
+KTSS 
+ 70 Here's how the removeEventListener() method works:  
+element.removeEventListener(eventType, eventHandler, useCapture);  
+Parameters:  
+- eventType: A string that specifies the type of event for which the listener was originally 
+attached.  
+- eventHandler: The same function that was used as the event handler when attaching the 
+listener. 
+- useCapture (optional): A boolean value that determines whether the listener was attached 
+for event capturing (`true`) or event bubbling (`false`, default behavior).  
+This parameter should match the one used when attaching the listener. The 
+removeEventListener() method removes event handlers that have been attached with the 
+addEventListener() method:  
+● Window Object  
+In JavaScript, the window object is a global object that represents the browser window or the 
+global context in which JavaScript code is executed. It serves as the top-level object in the 
+browser's JavaScript object hierarchy.  
+■Window object Properties  
+●console 
+A console traditionally refers to a computer terminal where a user may input commands and 
+view output such as the results of inputted commands or status messages from the computer.  
+A Console method is an object used to access the browser debugging console. The console 
+object provides multiple methods to use.  
+The console object in JavaScript provides methods for logging information to the browser's 
+console. It is commonly used for debugging and troubleshooting purposes.  
+Here are some commonly used methods of the `console` object:  
+1. log 
+console.log(): This method is used to log messages to the console. You can pass one or more 
+values or variables as arguments, and they will be displayed in the console. For example:  
+console.log('Hello, world!'); console.log('The value of x is:', x);  
+2. info 
+console.info(): This method is used to log informational messages to the console. It is typically 
+used to provide additional information or details about the code execution. It can accept one 
+or more values or variables as arguments.  
+For example:  
+console.info('This is an informational message.'); console.info('Details:', detailsObject);  
+3. warn 
+Prepared by: AJM  
+KTSS 
+ 71 console.warn():  This method is used to log warning messages to the console. It is useful for 
+highlighting potential issues or problematic areas in your code. It can accept one or more 
+values or variables as arguments.  
+For example:  
+console.warn ('This is a warning message!'); console.warn('Potential performance issue:', 
+functionName);  
+4. error 
+console.error():  This method is used to log error messages to the console. It is often used to 
+indicate and track down errors in your code. It can accept one or more values or variables as 
+arguments.  
+For example:  
+console.error('An error occurred!'); console.error('Invalid input:', userInput);’’’  
+5. clear 
+console.clear():  This method is used to clear the console, removing any previously logged 
+messages. It does not accept any arguments.  
+For example: console.clear();  
+● document  
+A Document object represents the HTML document that is displayed in that window. When an 
+HTML document is loaded into a web browser, it becomes a document object . 
+The `document` object in JavaScript represents the HTML document currently loaded in the 
+browser window. It provides methods, properties, and events that allow you to manipulate 
+and interact with the content, structure, and styles of the document. Here is a description of the 
+`document` object and its key features:  
+1. DOM Manipulation : The `document` object provides methods to access and  
+manipulate elements in the document's DOM (Document Object Model). Some commonly used 
+methods include:  
+-getElementById(): Retrieves an element from the document based on its unique `id` 
+attribute. 
+-querySelector(): Returns the first element that matches a specified CSS selector.  
+- querySelectorAll(): Returns a list of all elements that match a specified CSS selector.  
+-createElement(): Creates a new HTML element.  
+-createTextNode(): Creates a new text node.  
+-appendChild(): Appends a node as the last child of a specified parent node. -
+removeChild(): Removes a child node from a specified parent node.  
+Prepared by: AJM  
+KTSS 
+ 72 2. Event Handling : The `document` object allows you to handle events that occur in the 
+document. Some commonly used methods and properties related to event handling include:  
+-addEventListener(): Attaches an event listener to the document or a specific element.  
+-removeEventListener(): Removes an event listener from the document or a specific 
+element. 
+-createEvent(): Creates a new event object that can be dispatched later.  
+-dispatchEvent(): Dispatches a specified event to the document or a specific element.  
+3. Document Information : The `document` object provides properties to access  
+information about the document itself.  
+Some commonly used properties include: -title: Gets or sets the title of the document. -URL: 
+Gets the URL of the document.  
+-domain: Gets or sets the domain of the document's URL. -head: Gets the `<head>` 
+element of the document. -body: Gets the `<body>` element of the document.  
+4. Styling and CSS : The `document` object allows you to access and modify styles and 
+CSSrelated information.  
+Some commonly used properties include:  
+- styleSheets: Provides access to the stylesheets associated with the document.  
+- getElementById().style : Allows you to access and modify the inline CSS styles of an  
+element. 
+- querySelector().classList : Allows you to access and modify the classes of an element.  
+These are just a few examples of the methods, properties, and features available on the  
+document object. The `document` object is a powerful tool in JavaScript that enables  
+you to dynamically manipulate the HTML document, handle events, access and modify  
+elements, and interact with the structure, content, and styles of the document.  
+❖ innerHeight  
+The innerHeight property returns the height of a window's content area.  
+The innerHeight property in JavaScript is a property of the window object. It represents the 
+height, in pixels, of the viewport's content area, excluding any scrollbars or other UI elements.  
+Here are some key points about the `innerHeight` property:  
+- The innerHeight property provides the height of the browser window's content area,  
+which is the visible portion of a webpage.  
+- It does not include the height of any browser chrome, such as the address bar or  
+Prepared by: AJM  
+KTSS 
+ 73 toolbar, or any scrollbars that may be present.  
+- The value of innerHeight can change dynamically as the user resizes the browser  
+window. 
+- You can access the `innerHeight` property using the `window.innerHeight` syntax.  
+Here's an example of how you can use the `innerHeight` property:  
+console.log(window.innerHeight); // Outputs the current height of the viewport's content area.  
+By using the `innerHeight` property, you can retrieve the height of the visible area of the 
+browser window. This information can be useful for responsive design, determining the 
+available space for content, or adjusting the layout of elements based on the available 
+vertical space.  
+❖ innerWidth  
+The innerWidth property returns the width of a window's content area.  
+The `innerWidth` property in JavaScript is a property of the `window` object. It represents the 
+width, in pixels, of the viewport's content area, excluding any scrollbars or other UI elements.  
+Here are some key points about the `innerWidth` property:  
+- The `innerWidth` property provides the width of the browser window's content area,  
+which is the visible portion of a webpage.  
+- It does not include the width of any browser chrome, such as the address bar or toolbar,  
+or any scrollbars that may be present.  
+- The value of `innerWidth` can change dynamically as the user resizes the browser  
+window. 
+- You can access the `innerWidth` property using the `window.innerWidth`syntax.  
+Here's an example of how you can use the `innerWidth` property:  
+console.log(window.innerWidth); // Outputs the current width of the viewport's content area.  
+By using the `innerWidth` property, you can retrieve the width of the visible area of the 
+browser window. This information can be useful for responsive design, determining the 
+available space for content, or adjusting the layout of elements based on the available 
+horizontal space.  
+❖ length 
+The length property returns the number of (framed) windows in the window. In JavaScript, the 
+`length` property is a built-in property that is available on certain  
+objects, such as strings, arrays, and collections. It represents the number of elements or 
+characters contained in the object.  
+Prepared by: AJM  
+KTSS 
+ 74 Here are some key points about the `length` property:  
+- For strings: The `length` property returns the number of characters in a string.  
+const str = "Hello, world!";  
+console.log(str.length); // Outputs 13  
+- For arrays: The `length` property returns the number of elements in an array.  
+const arr = [1, 2, 3, 4, 5];  
+console.log(arr.length); // Outputs 5  
+- For collections : Some JavaScript objects, such as HTML collections returned by  
+methods like `getElementsByTagName()` or `querySelectorAll()`, also have a `length`  
+property that represents the number of elements in the collection.  
+const elements = document.getElementsByTagName("p"); console.log(elements.length); // 
+Outputs the number of <p> elements in the document.  
+The `length` property is read-only, meaning you cannot directly modify its value. Instead, it 
+reflects the current number of elements or characters in the object.  
+- It's important to note that the `length` property is zero-based, meaning it counts  
+elements or characters starting from index 0. So, the highest index or position in an  
+array or string will always be `length - 1`  
+The length property is a convenient way to determine the size or number of elements in strings, 
+arrays, or collections in JavaScript. It allows you to access and work with the length of these 
+objects dynamically, enabling you to perform various operations and checks based on their 
+size. 
+❖ localStorage  
+The localStorage read-only property of the window interface allows you to access a Storage 
+object for the Document's origin.  
+In JavaScript, the `localStorage` object is a web storage mechanism that allows you to store 
+key-value pairs locally in the browser. It provides a simple way to persistently store data on 
+the client-side, even when the browser is closed and reopened.  
+Here are some key points about `localStorage`  
+- localStorage is part of the Web Storage API, which includes `localStorage` and  
+sessionStorage. Both provide similar functionality, but with different scopes and  
+lifetimes. 
+- The localStorage object is accessible globally in the browser's JavaScript  
+environment, allowing you to store and retrieve data from any page within the same  
+Prepared by: AJM  
+KTSS 
+ 75 domain. 
+- The data stored in localStorage is persistent, meaning it remains available even after  
+the browser is closed and reopened. It is stored indefinitely until explicitly cleared  
+by the user or through JavaScript code.  
+- You can use the `localStorage.setItem()` method to store a value with a specified  
+key, and `localStorage.getItem()` to retrieve the value associated with a key.  
+For example:  
+localStorage.setItem('username', 'John');  
+const username = localStorage.getItem('username'); console.log(username); // Outputs 'John'  
+- You can also use dot notation to set and retrieve values from `localStorage`:  
+localStorage.username = 'John';  
+const username = localStorage.username; console.log(username); // Outputs 'John'  
+- To remove an item from `localStorage`, you can use the localStorage.removeItem()  
+method and pass in the key of the item you want to remove.  
+- To clear all items stored in localStorage, you can use the localStorage.clear() method  
+- It's important to note that localStorage is subject to browser storage limits, which  
+vary across different browsers.  
+Typically, the limit is around 5MB per origin (domain). localStorage provides a convenient 
+way to store and retrieve data locally in the browser, making it useful for tasks such as saving 
+user preferences, caching data, or persisting state between page reloads.  
+However, it's important to handle data stored in `localStorage` carefully, as it is accessible to 
+JavaScript code running on the same domain and can be manipulated by the user.  
+❖ Location 
+The location object contains information about the current URL.  
+In JavaScript, the location object represents the current URL of the browser window or the URL 
+of the webpage that is currently loaded.  
+It provides properties and methods to access and manipulate different components of the URL.  
+Here are some key points about the `location` object:  
+-The `location` object is a property of the global `window` object, which is accessible in the 
+browser's JavaScript environment.  
+-The location object has various properties that provide information about different parts of 
+the URL: 
+Prepared by: AJM  
+KTSS 
+ 76 - location.href: Returns the complete URL of the current webpage.  
+- location.protocol: Returns the protocol (e.g., "http:", "https:", "file:") of the current  
+URL. 
+- location.host : Returns the hostname and port number of the current URL.  
+- location.hostname: Returns the hostname (domain) of the current URL.  
+- location.port: Returns the port number of the current URL.  
+- location.pathname : Returns the path and filename of the current URL.  
+- location.search : Returns the query string of the current URL.  
+- location.hash : Returns the fragment identifier (anchor) of the current URL.  
+- You can also modify certain properties of the `location` object to navigate to a  
+different URL or modify specific components of the current URL.  
+For example:  
+location.href = 'https://www.example.com'; // Navigates to a different URL location.hash = 
+'section1'; // Changes the fragment identifier of the current URL - The location object provides 
+methods to perform common navigation actions:  
+- location.reload(): Reloads the current page.  
+- location.replace(url): Replaces the current URL with a new URL without adding a new  
+entry to the browser's history.  
+- location.assign(url): Loads a new URL, adding a new entry to the browser's history.  
+- The location object is read-only for most properties, meaning you can access their  
+values but cannot directly modify them. However, you can assign a new URL to the  
+location.href property or use the provided methods to navigate to different URLs. The location 
+object is a powerful tool for working with URLs in JavaScript. It allows you to access and 
+manipulate different parts of the URL, navigate to different web pages, and control the 
+browser's history.  
+❖ Methods 
+In JavaScript, methods are functions that are associated with objects and can be called to 
+perform specific actions or operations on those objects. Here are some key points about 
+methods in JavaScript:  
+- Methods are defined within objects and are accessed using dot notation or bracket  
+notation. 
+- Methods can be predefined methods provided by JavaScript itself, or they can be  
+Prepared by: AJM  
+KTSS 
+ 77 custom methods defined by developers.  
+- Predefined methods are built-in functions that are available on certain objects and can  
+be called directly. Examples include `alert()`, `setInterval()`, and `clearInterval() `.  
+- Custom methods are functions that are defined within an object and can be called on  
+instances of that object. They are used to encapsulate behavior or actions related to the  
+object. 
+❖ alert() 
+The alert() method displays an alert box with a message and an OK button. It is used when 
+you want information to come through to the user.  
+The alert() function is a predefined method in JavaScript that displays a modal dialog box 
+with a message and an OK button. It is commonly used for displaying simple notifications or 
+alerts to the user.  
+Here are some key points about the alert() function.  
+- The `alert()` function takes a single argument, which is the message to be displayed in  
+the dialog box. The message can be a string or a variable that holds a string value.  
+- When the `alert()` function is called, it interrupts the execution of the script and  
+displays the dialog box with the specified message.  
+- The dialog box typically appears as a small window in the center of the browser window,  
+and it prevents the user from interacting with the rest of the page until the OK button is  
+clicked. 
+- Here's an example of how to use the `alert()` function:  
+alert('Hello, world!'); // Displays an alert dialog with the message "Hello, world!"  
+Syntax: alert(message)  
+Example: alert("Hello! I am an alert box!!");  
+❖ setInterval()  
+The setInterval() method calls a function at specified intervals (in milliseconds). The setInterval() 
+method continues calling the function until clearInterval() is called, or the window is closed.  
+Syntax: setInterval(function, milliseconds, param1, param2, ...)  
+Parameter Description  
+function Required.The function to execute  
+milliseconds Required. The execution interval.If the value is less than 10, 10 is used  
+Prepared by: AJM  
+KTSS 
+ 78 param1, param2, Optional.Additional  parameters to pass to the function Not 
+supported in IE9 and earlier.  
+ 
+Example: setInterval(function () {element.innerHTML += "Hello"}, 1000); ❖clearInterval()  
+The `clearInterval()` function is a predefined method in JavaScript that is used to stop the 
+execution of a recurring action that was initiated by the `setInterval()` function. It is commonly 
+used to cancel or clear a timer set by `setInterval()`.  
+Here are some key points about the `clearInterval()` function:  
+- The clearInterval() function takes a single argument, which is the identifier of the  
+interval to be cleared. This identifier is typically returned by the `setInterval()` function  
+when it is called to start a recurring action.  
+- When the clearInterval() function is called with the interval identifier, it stops the  
+execution of the recurring action associated with that identifier.  
+- Here's an example of how to use the `setInterval()` and `clearInterval()` functions  
+together: 
+const intervalId = setInterval(function() {  
+console.log('This message will be logged every 1 second'); }, 1000);  
+// After some time or under certain conditions, you can clear the interval using  
+clearInterval():  
+clearInterval(intervalId);  
+- In the example above, the setInterval() function is used to execute a function every 1  
+second (1000 milliseconds). The interval identifier returned by `setInterval()` is stored in  
+the `intervalId` variable, which is later passed to `clearInterval()` to stop the recurring  
+action. 
+- It's important to note that the interval identifier passed to `clearInterval()` must be the  
+exact identifier returned by `setInterval()`. If you pass a different identifier or an invalid  
+value, the interval will not be cleared.  
+- By using clearInterval(), you can control the execution of recurring actions and prevent  
+them from running indefinitely. This can be useful for managing timers, animations, or  
+any other actions that need to be stopped or canceled at a specific point in your code.  
+Prepared by: AJM  
+KTSS 
+ 79 The clearInterval() function is an essential tool for managing recurring actions in JavaScript. It 
+provides a way to stop the execution of a timer set by setInterval() and gives you control over 
+when and how long the recurring action should run.  
+The clearInterval() method clears a timer set with the setInterval() method.  
+Note: 
+To clear an interval, use the id returned from setInterval(): myInterval = setInterval(function, 
+milliseconds);  
+Then you can to stop the execution by calling clearInterval(): clearInterval(myInterval);  
+Syntax: clearInterval(intervalId)  
+❖ setTimeout()  
+The `setTimeout()` function is a predefined method in JavaScript that allows you to execute a 
+function or evaluate an expression after a specified delay (in milliseconds). It is commonly used 
+to schedule a one-time action to occur in the future. Here are some key points about the 
+`setTimeout()` function:  
+- The setTimeout() function takes two arguments: a function or an expression to be  
+executed, and the delay in milliseconds before the execution should occur.  
+- The function or expression provided as the first argument will be executed once, after  
+the specified delay has passed.  
+- Here's an example of how to use the `setTimeout()` function:  
+setTimeout(function() {  
+console.log('This message will be logged after 2 seconds'); }, 2000);  
+- In the example above, the setTimeout() function is used to schedule the execution of  
+an anonymous function after a delay of 2000 milliseconds (2 seconds). After the delay,  
+the function will be executed, and the specified message will be logged to the console.  
+- The delay specified in setTimeout() can be any non-negative integer. A value of 0 or a  
+negative number will still result in a minimum delay of 4 milliseconds due to browser  
+limitations.  
+- The setTimeout() function returns a unique identifier that can be used with the  
+clearTimeout() function to cancel the execution of the scheduled action before it occurs.  
+- Here's an example of how to use `clearTimeout()` to cancel a scheduled action:  
+const timeoutId = setTimeout(function() { console.log('This message will not be logged'); }, 
+2000); 
+Prepared by: AJM  
+KTSS 
+ 80 clearTimeout(timeoutId);  
+- In the example above, the `clearTimeout()` function is called with the `timeoutId` returned by 
+`setTimeout()`, effectively canceling the execution of the scheduled action. The setTimeout() 
+method calls a function after a number of milliseconds.  
+Syntax: setTimeout(function, milliseconds, param1, param2,)  
+Parameters  
+Parameter  Description  
+Function  Required.The function to execute.  
+Milliseconds  Optional.Number of milliseconds to waitbefore executing. Default value is 0.  
+param1,param2  OptionaParameters  to pass to the function Not supported in IE9 and earlier  
+❖ clearTimeout()  
+The clearTimeout() method clears a timer set with the setTimeout() method.  
+Syntax: clearTimeout(id_of_settimeout)  
+❖ open() 
+The open() method opens a new browser window, or a new tab, depending on your browser 
+settings and the parameter values.  
+Syntax: window.open(URL, name, specs, replace)  
+Parameters  
+Parameter Description  
+URL Optional.The URL of the page to open.If  no URL is specified, a new blank 
+window/tab is opened  
+name Optional.The target attribute or the name of the window.The following values 
+are supported:  
+ 
+Value  Description  
+_blank default  URL is loaded into a new window, or tab.  
+_parent  URL is loaded into the parent frame  
+_self  URL replaces the current page  
+_top  URL replaces any framesets that may be loaded  
+Example: Open an about:blank page in a new window/tab: var myWindow = 
+window.open("", "", "width=200,height=100");  
+Prepared by: AJM  
+KTSS 
+ 81 ❖ confirm()  
+The confirm() method displays a dialog box with a message, an OK button, and a Cancel 
+button. 
+The confirm() method returns true if the user clicked "OK", otherwise false. Syntax: 
+confirm(message)  
+● close() 
+The close() method closes a window. Syntax: window.close()  
+● stop() 
+The stop() method stops window loading.  
+The stop() method is the same as clicking stop in the browser. Syntax: window.stop()  
+❖ print() 
+The print() method prints the contents of the current window.  
+The print() method opens the Print Dialog Box, which lets the user to select preferred printing 
+options. 
+Syntax: window.print()  
+✔ JavaScript form validation  
+JavaScript form validation refers to the process of validating user input in HTML forms using 
+JavaScript code. It helps ensure that the data entered by users meets certain criteria or 
+constraints before it is submitted to a server or processed further.  
+Data validation: is the process of ensuring that user input is clean, correct, and useful.  
+The form validation process typically consists of two parts— the required fields validation 
+which is performed to make sure that all the mandatory fields are filled in, and the data 
+format validation which is performed to ensure that the type and format of the data entered in 
+the form is valid.  
+JavaScript form validation can encompass various types of validation checks, including:  
+1. Required fields : Ensuring that mandatory fields are filled in before the form can be 
+submitted.  
+2. Data format validation : Verifying that the input matches the expected format, such as 
+validating email addresses, phone numbers, dates, or URLs.  
+3. Length constraints : Checking if the input has a minimum or maximum length requirement.  
+4. Numeric input validation : Validating that numeric fields contain valid numbers and fall 
+within specified ranges.  
+5. Pattern matching : Using regular expressions to validate input against specific patterns or 
+rules. 
+Prepared by: AJM  
+KTSS 
+ 82 6. Confirmation fields : Comparing the values of two fields, such as password and confirm 
+password fields, to ensure they match.  
+7. Custom validation : Implementing custom validation logic based on specific business rules or 
+requirements.  
+8. Client-side form validation using JavaScript improves the user experience by providing 
+immediate feedback to users when they submit a form, reducing the need for server round-
+trips and enhancing data integrity. However, it is important to note that clientside validation 
+should always be supplemented with server-side validation to ensure data integrity and 
+security, as client-side validation can be bypassed or manipulated by malicious users.  
+By implementing JavaScript form validation, developers can create forms that validate user 
+input in real-time, ensuring that the data entered by users meets the required criteria and 
+minimizing potential errors or inconsistencies in the submitted data.  
+JavaScript provides a range of methods and properties to facilitate form validation, including 
+accessing form elements and their values, performing conditional checks, using regular 
+expressions for pattern matching, and displaying error messages or applying visual cues to 
+indicate validation errors.  
+● Canvas  
+❖ Introduction  
+<canvas> is an HTML element which can be used to draw graphics via scripting (usually 
+JavaScript). This can, for instance, be used to draw graphs, combine photos, or create simple 
+animations.  
+The <canvas> element is a rectangular area on a web page where you can draw and 
+manipulate graphics. It is defined with a width and height attribute, which determine the size 
+of the canvas on the screen. It defined in HTML with a width and height attribute. It acts as a 
+container for graphics and provides a blank canvas for drawing.  
+- To work with the canvas element in JavaScript, you need to obtain a rendering context using 
+the getContext() method. The most commonly used context is the 2D rendering context, 
+obtained by passing '2d' as an argument to getContext().  
+- Once you have the rendering context, you can use its methods and properties to draw  
+various shapes, lines, text, images, and more on the canvas.  
+- The canvas API provides methods like fillRect(), strokeRect(), arc(), lineTo(), and fillText() for 
+drawing different elements on the canvas. You can set attributes like stroke color, fill color, line 
+width, and font properties to customize the appearance of the drawn elements.  
+- The canvas element also supports transformations, allowing you to scale, rotate, and 
+translate the canvas or individual objects on it using methods like scale(), rotate(), and 
+translate().  
+- Animations can be created on the canvas by repeatedly redrawing the canvas at specific 
+intervals using techniques like requestAnimationFrame() or setInterval().  
+Prepared by: AJM  
+KTSS 
+ 83 By updating the canvas content in each frame, you can achieve smooth and dynamic 
+animations.  
+- Images can be loaded onto the canvas using the drawImage() method. This allows you to 
+display images, create sprites, or manipulate pixels on the canvas.  
+- The canvas element can also handle user interactions by listening to events like mouse clicks, 
+mouse movement, or touch events. This enables you to create interactive applications and 
+games. 
+- The canvas element can be styled using CSS to control its position, size, and appearance 
+within the web page layout.  
+Canvas Examples  
+A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no 
+content. 
+The markup looks like this:  
+<canvas id="myCanvas" width="200" height="100"></canvas>  
+Note: Always specify an id attribute (to be referred to in a script), and a width and height 
+attribute to define the size of the canvas. To add a border, use the style attribute.  
+✔JavaScript HTML DOM  
+The Document Object Model (DOM) is the data representation of the objects that comprise the 
+structure and content of a document on the web.  
+JavaScript HTML DOM (Document Object Model) is a programming interface that represents 
+the structure of an HTML document as a tree-like structure. It allows JavaScript to interact with 
+and manipulate the elements, attributes, and content of an HTML document.  
+Accessing HTML elements: The DOM provides methods to access HTML elements. You can use 
+methods like `getElementById()`, `getElementsByClassName()`, `getElementsByTagName()`, or 
+`querySelector()` to select elements based on their IDs, class names, tag names, or CSS 
+selectors. 
+● innerHTML  
+The innerHTML property sets or returns the HTML content (inner HTML) of an element.  
+In JavaScript, the `innerHTML` property is used to get or set the HTML content of an element. It 
+allows you to access the markup inside an element, including its child elements, text nodes, and 
+HTML tags. Here's how you can use the `innerHTML` property:  
+1. Get the HTML content: To retrieve the HTML content of an element, you can simply  
+access the `innerHTML` property.  
+const element = document.getElementById('myElement');  
+const htmlContent = element.innerHTML;  
+Prepared by: AJM  
+KTSS 
+ 84 console.log(htmlContent);  
+2. Set the HTML content: You can also use the `innerHTML` property to set new HTML  
+content for an element. This can include plain text, HTML tags, or a combination of both.  
+const element = document.getElementById('myElement');  
+element.innerHTML = '<h1>New Heading</h1><p>New paragraph content</p>';  
+● getElementById  
+In JavaScript, the `getElementById()` method is used to retrieve an HTML element from the 
+document based on its unique ID attribute. It allows you to access and manipulate specific 
+elements by referring to their unique identifier.  
+Here's how you can use the `getElementById()` method:  
+1. Syntax: The `getElementById()` method is called on the `document` object and takes  
+the ID of the element as a parameter. The ID is a string value that should match the value  
+of the `id` attribute of the desired element.  
+const element = document.getElementById('elementId');  
+2. Retrieving an element: When you call `getElementById()` with the ID of an element, it  
+returns the element object representing that specific element in the document. You can  
+then store this object in a variable for further use.  
+const element = document.getElementById('myElement');’’’ ▪ The getElementById() method 
+returns an element with a specified value.  
+▪ The getElementById() method returns null if the element does not exist.  
+▪ The getElementById() method is one of the most common methods in the HTML DOM.  
+● getElementsByClassName  
+The getElementsByClassName() method returns a collection of elements with a specified class 
+name(s). 
+In JavaScript, the `getElementsByClassName()` method is used to retrieve a collection of HTML 
+elements based on their class name. It allows you to access and manipulate multiple elements 
+that share the same class. Here's how you can use the `getElementsByClassName()` method:  
+1. Syntax: The getElementsByClassName() method is called on the document object and takes 
+the class name as a parameter. The class name is a string value that should match the value of 
+the class attribute of the desired elements.  
+const elements = document.getElementsByClassName('className');  
+Prepared by: AJM  
+KTSS 
+ 85 2. Retrieving elements: When you call `getElementsByClassName()` with the class name, it 
+returns a collection (array-like object called a "NodeList") of elements that have the specified 
+class. You can then iterate over this collection or access specific elements using index notation.  
+const elements = document.getElementsByClassName('myClass'); // Iterate over the collection  
+for (let i = 0; i < elements.length; i++) { const element = elements[i]; // Perform actions on 
+each element }  
+// Access a specific element const firstElement = elements[0];  
+● getElementsByName  
+The getElementsByName() method returns a collection of elements with a specified name.  
+In JavaScript, the `getElementsByName()` method is used to retrieve a collection of HTML 
+elements based on their `name` attribute. It allows you to access and manipulate multiple 
+elements that share the same name.  
+Here's how you can use the `getElementsByName()` method:  
+1. Syntax: The getElementsByName() method is called on the `document` object and  
+takes the name attribute as a parameter. The name is a string value that should match  
+the value of the name attribute of the desired elements.  
+const elements = document.getElementsByName('nameAttribute');  
+2. Retrieving elements: When you call getElementsByName() with the name attribute, it  
+returns a collection (an array-like object called a "NodeList") of elements that have the  
+specified name. You can then iterate over this collection or access specific elements  
+using index notation.  
+const elements = document.getElementsByName('myName'); // Iterate over the collection  
+for (let i = 0; i < elements.length; i++) { const element = elements[i]; // Perform actions on 
+each element }  
+// Access a specific element const firstElement = elements[0];  
+● getElementsByTagName  
+The getElementsByTagName() method returns a collection of all elements with a specified tag 
+name. 
+In JavaScript, the getElementsByTagName() method is used to retrieve a collection of HTML 
+elements based on their tag name. It allows you to access and manipulate multiple elements 
+that share the same tag name.  
+Here's how you can use the `getElementsByTagName()` method:  
+Prepared by: AJM  
+KTSS 
+ 86 1. Syntax: The getElementsByTagName() method is called on the document object and takes 
+the tag name as a parameter. The tag name is a string value that represents the desired 
+HTML tag.  
+const elements = document.getElementsByTagName('tagName');  
+2. Retrieving elements: When you call getElementsByTagName() with the tag name, it returns a 
+collection (an array-like object called a "HTMLCollection") of elements that have the specified 
+tag name. You can then iterate over this collection or access specific elements using index 
+notation. 
+const elements = document.getElementsByTagName('div'); // Iterate over the collection  
+for (let i = 0; i < elements.length; i++) { const element = elements[i];  
+// Perform actions on each element  
+} 
+/ Access a specific element const firstElement = elements[0];  
+● querySelector  
+The querySelector() method returns the first element that matches a CSS selector.  
+In JavaScript, the `querySelector()` method is a powerful tool for selecting and retrieving 
+elements from the document using CSS selector syntax. It allows you to select elements based 
+on various criteria such as tag name, class name, ID, attribute, or even complex selectors. 
+Here's how you can use the `querySelector()` method:  
+1. Syntax: The querySelector() method is called on the document object or on any element and 
+takes a CSS selector as a parameter. The CSS selector is a string value that specifies the 
+criteria for selecting the desired element(s).  
+const element = document.querySelector('selector');  
+2. Selecting elements: When you call querySelector() with a CSS selector, it returns the first 
+element that matches the specified selector. If no matching element is found, it returns `null`.  
+You can select elements based on various criteria:  
+- By tag name: Use the tag name as the selector to select elements with that specific tag.  
+const element = document.querySelector('div');  
+- By class name: Use the class name preceded by a dot to select elements with that  
+specific class.  
+const element = document.querySelector('.myClass');’  
+- By ID: Use the ID preceded by a hash symbol to select the element with that specific ID.  
+const element = document.querySelector('#myId');  
+- By attribute: Use attribute selectors to select elements based on attribute values.  
+Prepared by: AJM  
+KTSS 
+ 87 const element = document.querySelector('[data-attribute="value"]');  
+● querySelectorAll  
+The querySelectorAll() method returns all elements that matches a CSS selector(s).  
+In JavaScript, the querySelectorAll() method is similar to querySelector(), but it returns a 
+collection of all elements in the document that match a specified CSS selector.  
+It allows you to select multiple elements based on various criteria using CSS selector syntax. 
+Here's how you can use the querySelectorAll() method:  
+1. Syntax: The querySelectorAll() method is called on the document object or on any  
+element and takes a CSS selector as a parameter. The CSS selector is a string value that  
+specifies the criteria for selecting the desired elements.  
+const elements = document.querySelectorAll('selector');  
+2. Selecting elements: When you call querySelectorAll() with a CSS selector, it returns a  
+collection (a "NodeList" or "StaticNodeList" object) of all elements that match the  
+specified selector. If no matching elements are found, it returns an empty collection.  
+You can select elements based on various criteria:  
+- By tag name: Use the tag name as the selector to select elements with that specific tag.  
+const elements = document.querySelectorAll('div');  
+- By class name: Use the class name preceded by a dot to select elements with that  
+specific class.  
+const elements = document.querySelectorAll('.myClass');  
+- By ID: Use the ID preceded by a hash symbol to select the element with that specific  
+ID. Note that this will return a collection with a single element since IDs should be unique.  
+const elements = document.querySelectorAll('#myId');  
+- By attribute: Use attribute selectors to select elements based on attribute values.  
+const elements = document.querySelectorAll('[data-attribute="value"]');  
+● JavaScript HTML styles  
+JavaScript HTML styles refer to the ability to manipulate and control the visual appearance of 
+HTML elements using JavaScript. With JavaScript, you can dynamically modify the styles of 
+HTML elements, including properties like color, size, position, visibility, and more. This allows 
+you to create interactive and responsive web pages by changing the presentation of elements 
+based on user actions, events, or other conditions.  
+● Animation  
+Prepared by: AJM  
+KTSS 
+ 88 Animation refers to the process of creating the illusion of motion or change over time by 
+displaying a sequence of static images or frames in rapid succession. In the context of web 
+development, animation is commonly used to enhance user interfaces, provide visual feedback, 
+and create engaging user experiences.  
+In web development, there are different techniques and technologies available to create 
+animations:  
+CSS Animations:  
+CSS animations allow you to animate HTML elements using CSS properties and keyframes. 
+With CSS animations, you can define the animation duration, timing function, and keyframe 
+breakpoints to control the animation's behavior.  
+CSS animations can be triggered by adding or removing CSS classes, using JavaScript to 
+modify CSS properties, or using CSS pseudo-classes like `:hover` and `:focus`.  
+You can use JavaScript to create a complex animation having, but not limited to, the following 
+elements: 
+✓ Fireworks  
+✓ Fade Effect  
+✓ Roll-in or Roll-out  
+✓ Page-in or Page-out  
+✓ Object movements  
+JavaScript provides the following two functions to be frequently used in animation programs.  
+❖ setTimeout(function, duration) - This function calls function after duration milliseconds from 
+now. 
+❖ setInterval(function, duration) - This function calls function after every duration milliseconds.  
+❖ clearTimeout(setTimeout_variable) - This function clears any timer set by the setTimeout() 
+functions. 
+● Transition  
+A transition is a change from one thing to the next, either in action or state of being.  
+In JavaScript, a transition in HTML styles refers to the process of smoothly animating changes 
+to CSS properties of an HTML element over a specified duration. It involves gradually 
+modifying the values of CSS properties to create a visually appealing and smooth visual 
+effect. JavaScript allows you to control and trigger transitions dynamically based on user 
+interactions or other programmatic events.  
+Here's a breakdown of how transitions work in JavaScript HTML styles:  
+1. Select the element:  
+Prepared by: AJM  
+KTSS 
+ 89 - Use JavaScript methods like `querySelector()` or `getElementById()` to select the HTML 
+element to which you want to apply the transition.  
+2. Modify the CSS properties:  
+- Use JavaScript to modify the CSS properties of the selected element over time.  
+- Update the CSS properties gradually by changing their values in small increments at regular 
+intervals. 
+3. Specify the transition properties:  
+- Define the duration of the transition, which determines how long the transition should take to 
+complete.  
+- Choose a timing function to control the pace of the transition. Timing functions like linear, 
+ease-in, ease-out, and ease-in-out affect the speed of the transition.  
+Difference between transitions and animations:  
+Transitions  Animations  
+Transitions cannot loop (You can 
+make them do that but they are not 
+designed for that).  Animations have no problem in looping.  
+Transitions need a trigger to run like 
+mouse hover.  The animation just starts. They don’t need any kind of 
+external trigger source.  
+Transitions are easy to work in 
+JavaScript.  The animations are hard to work in JavaScript. The 
+syntax for manipulating a keyframe and assigning a 
+new value to it, is very complex.  
+Transitions animate a object from one 
+point to another.  Animation allows you to define Keyframes which varies 
+from one state to another with various properties and 
+time frame.  
+Use transition for manipulating the 
+value using JavaScript.  Flexibility is provided by having multiple keyframes and 
+easy loop.  
+● Slide show  
+A web slideshow is a sequence of images or text that consists of showing one element of the 
+sequence in a certain time interval.  
+In JavaScript HTML styles, a slideshow refers to a dynamic presentation of a series of images 
+or content that is displayed sequentially, typically with a transition effect between each slide. 
+Slideshows are commonly used to showcase images, highlight product features, or present 
+content in a visually appealing and interactive manner.  
+Here's an overview of how to create a slideshow using JavaScript HTML styles:  
+1. HTML Structure:  
+Prepared by: AJM  
+KTSS 
+ 90 - Create a container element in your HTML markup to hold the slideshow.  
+- Inside the container, create individual slide elements, such as <div> or <img>, for each slide 
+in the slideshow.  
+2. CSS Styling:  
+- Apply CSS styles to position and style the slideshow container and slide elements.  
+- Use CSS properties like `position`, `display`, `width`, and `height` to control the layout and 
+appearance of the slideshow.  
+2.7.2: Apply JavaScript in HTML  
+Here are the steps to apply JavaScript in HTML:  
+1. Create an HTML file : Start by creating a new HTML file or opening an existing one in a 
+text editor.  
+2. Add the script tag : Inside the HTML file, within the `<head>` or `<body>` section, add the 
+`<script>` tag. This tag is used to embed JavaScript code within the HTML file.  
+3. Write JavaScript code : Between the opening and closing `<script>` tags, write your 
+JavaScript code. This can include variable declarations, functions, event handlers, and other 
+JavaScript logic.  
+4. Link an external JavaScript file (optional):  Instead of embedding the JavaScript code 
+directly in the HTML file, you can also link an external JavaScript file using the `<script>` 
+tag's `src` attribute. For example: `<script src="script.js"></script>`. The external JavaScript 
+file should contain the JavaScript code you want to execute.  
+5. Place JavaScript code in the appropriate location:  Depending on the purpose of your 
+JavaScript code, place it in the appropriate location within the HTML file. For example, if you 
+want to manipulate the DOM, you might place the code inside a function that is called when 
+the page loads or in an event handler that triggers the code execution.  
+6. Test and debug: Save the HTML file and open it in a web browser. Use the browser's 
+developer tools to check for any JavaScript errors in the console and debug your code if 
+necessary.  
+7. Update HTML elements with JavaScript: Use JavaScript to select HTML elements using 
+methods like `querySelector()` or `getElementById()`. Then, manipulate the elements by 
+changing their content, attributes, styles, or other properties using JavaScript code.  
+8. Handle events: Use JavaScript to add event listeners to HTML elements. This allows you to 
+respond to user interactions such as clicks, mouse movements, or form submissions. Inside the 
+event handler functions, write the JavaScript code that should be executed when the event 
+occurs. 
+9. Interact with APIs (optional): Use JavaScript to interact with external APIs by making HTTP 
+requests, fetching data, and processing responses. This can involve using JavaScript methods 
+like `fetch()` or utilizing AJAX techniques.  
+Prepared by: AJM  
+KTSS 
+ 91 10. Save and deploy: Once you are satisfied with your JavaScript code, save the HTML file 
+and any linked JavaScript files. Deploy the HTML file and associated files to a web server or 
+hosting platform to make it accessible on the internet.  
+By following these steps, you can effectively apply JavaScript code within an HTML file to 
+add interactivity, manipulate  
+✓ JavaScript HTML event listener  
+To apply JavaScript event listeners in HTML, follow these steps:  
+1. Select the HTML element: Use JavaScript to select the HTML element to which you want to 
+attach the event listener. You can use methods like `querySelector()`, `getElementById()`, or 
+`getElementsByClassName()` to select the element(s) based on their CSS selector or ID.  
+2. Define the event listener function: Create a JavaScript function that will be executed when 
+the event occurs. This function will contain the code that you want to run in response to the 
+event. 
+3. Attach the event listener: Use the `addEventListener()` method to attach the event listener to 
+the selected HTML element. This method takes two arguments: the event type and the event 
+listener function.  
+4. Specify the event type: Choose the appropriate event type based on the user interaction 
+you want to respond to. Common event types include "click", "mouseover", "submit", 
+"keydown", and many more. You can find a comprehensive list of event types in the JavaScript 
+documentation.  
+5. Handle the event: Inside the event listener function, write the JavaScript code that should be 
+executed when the event occurs. This code can manipulate the DOM, modify CSS styles, 
+interact with APIs, or perform any other desired actions.  
+Here's an example that demonstrates applying an event listener to a button element:  
+HTML: 
+<button id="myButton">Click Me</button> JavaScript:  
+// Step 1: Select the button element  
+const button = document.getElementById("myButton");  
+// Step 2: Define the event listener function  
+function handleClick(event) { // Step 5: Handle the event  
+console.log("Button clicked!"); }  
+// Step 3: Attach the event listener  
+button.addEventListener("click", handleClick);  
+In this example, we select the button element using `getElementById()`, define the event 
+listener function `handleClick()`, and attach the event listener using `addEventListener()`. When 
+Prepared by: AJM  
+KTSS 
+ 92 the button is clicked, the `handleClick()` function is executed, and it logs a message to the 
+console. 
+Example:  
+Add an event listener that fires when a user clicks a button: 
+document.getElementById("myBtn").addEventListener("click", displayDate);  
+Add an Event Handler to an Element  
+Example:  
+Alert "Hello World!" when the user clicks on an element: element.addEventListene r("click", 
+function(){ alert("Hello World!"); }); 
+You can also refer to an external "named" function:  
+Example 
+Alert "Hello World!" when the user clicks on an element:  
+element.addEventListener("click", myFunction);  
+function myFunction() { alert ("Hello World!");  
+} 
+Add Many Event Handlers to the Same Element  
+Example 
+element.addEventListene r("click", myFunction); element.addEventListener("click", 
+mySecondFunction);  
+You can add events of different types to the same element: Example:  
+element.addEventListener("mouseover", myFunction);  
+element.addEventListener("click", mySecondFunction); element.addEventListener("mouseout", 
+myThirdFunction);  
+Add an Event Handler to the window Object  
+Example:  
+Add an event listener that fires when a user resizes the window: 
+window.addEventListener("resize", function(){  
+document.getElementById("demo").innerHTML = sometext; }); 
+Passing Parameters  
+Example:  
+element.addEventListener("click", function(){ myFunction(p1, p2); });  
+Event Bubbling or Event Capturing?  
+Prepared by: AJM  
+KTSS 
+ 93 addEventListener( event, function, useCapture ); 
+Example:  
+document.getElementById("myP").addEventListener("click",  
+myFunction, true); document.getElementById("myDiv").addEventListener("click", myFunction, 
+true); 
+The removeEventListener() method  
+Example:  
+element.removeEventListener("mousemove", myFunction);  
+✓Window Object  
+To apply the Window object in JavaScript, follow these steps:  
+1. Access the Window object: The Window object is the global object in the browser 
+environment, and it is automatically available in JavaScript without the need for any special 
+setup. You can directly access the Window object and its properties and methods.  
+2. Use Window methods and properties: The Window object provides various methods and 
+properties that allow you to interact with the browser window and its content.  
+3. Interact with the Window object: You can interact with the Window object by calling its 
+methods or accessing its properties. For example:  
+// Display an alert dialog  
+window.alert("Hello, World!");  
+// Prompt the user for input  
+const name = window.prompt("Please enter your name:");  
+// Open a new window  
+window.open("https://www.example.com");  
+// Close the current window  
+window.close();  
+You can also access the Window object implicitly without using the `window` prefix, as it is the 
+default global object in the browser environment. For example:  
+// Access the location property  
+console.log(location.href);  
+4. Handle window events: The Window object also provides event handling capabilities. You 
+can attach event listeners to respond to various events that occur in the browser window, such 
+as page load, resize, scroll, and more.  
+For example : 
+Prepared by: AJM  
+KTSS 
+ 94 // Attach an event listener for the page load event window.addEventListener("load", function() 
+{ console.log("Page loaded!");  
+}); 
+This code attaches an event listener to the `load` event of the Window object, which executes 
+the provided function when the page finishes loading.  
+By following these steps, you can effectively utilize the Window object in JavaScript to 
+interact with the browser window, display dialogs, navigate to URLs, access the HTML 
+document, and handle window events.  
+● Methods 
+To apply methods in JavaScript, follow these steps:  
+1. Identify the object: Determine the object on which you want to apply the method.  
+It can be a built-in JavaScript object or a custom object that you have defined.  
+2. Access the object: To access the object, create a new instance of it or reference an existing 
+object. 
+3. Call the method: Use the dot notation to call the method on the object. The dot notation is 
+used to access properties and methods of an object. For example, `object.method()`.  
+4. Pass arguments (if required): Some methods may require additional information to be 
+passed as arguments. Check the method's documentation or specification to understand the 
+required arguments and their order. Provide the necessary arguments when calling the 
+method. 
+5. Capture the return value (if applicable): Methods can return values. If the method you are 
+using returns a value, capture and store it in a variable for further use.  
+Here's an example that demonstrates using the `alert()` method:  
+// Step 1: Identify the object (window) // Step 2: Access the object (window) // Step 3: Call 
+the method (alert) window.alert("Hello, World!");  
+// Step 4: Pass arguments (message to be displayed)  
+When this code runs, it will display an alert dialog box in the browser window with the 
+message "Hello, World!".  
+The `alert()` method is commonly used to provide important information or notifications to the 
+user. It halts the execution of the JavaScript code until the user closes the alert dialog by 
+clicking the OK button.  
+❖ alert() 
+Here's an example of using the `alert()` method of the Window object to display an alert 
+dialog box with a message:  
+// Display an alert dialog alert("Hello, World!");  
+Prepared by: AJM  
+KTSS 
+ 95 When this code runs, it will display an alert dialog box with the message "Hello, World!" in 
+the browser window.  
+The `alert()` method is commonly used to provide important information or notifications to the 
+user. It halts the execution of the JavaScript code until the user closes the alert dialog by 
+clicking the OK button.  
+● setInterval()  
+Here's an example of using the `setInterval()` method in JavaScript:  
+// Define a function to be executed repeatedly function sayHello() {  
+console.log("Hello, World!"); }  
+// Call the function every 1 second using  
+setInterval setInterval(sayHello, 1000);  
+In this example, the `setInterval()` method is used to repeatedly execute the `sayHello()` 
+function every 1 second (1000 milliseconds). The `sayHello()` function simply logs the message 
+"Hello, World!" to the console.  
+The `setInterval()` method takes two arguments: the function to be executed and the time 
+interval in milliseconds. In this case, we pass the `sayHello` function as the first argument and 
+`1000` as the second argument to specify the interval of 1 second.  
+As a result, the message "Hello, World!" will be logged to the console every second until you 
+stop the interval.  
+`setInterval()` is commonly used for tasks that need to be repeated at regular intervals, such 
+as updating a clock, fetching data from a server, or animating elements on a web page. 
+Remember to clear the interval using `clearInterval()` when you want to stop the execution.  
+Example2 :  
+setInterval(function () {  
+element.innerHTML += "Hello"}, 1000);  
+• ClearInterval()  
+Here's an example that demonstrates how to use `clearInterval()`:  
+// Define a function to be executed repeatedly  
+function sayHello() {  
+console.log("Hello, World!"); }  
+// Call the function every 1 second using setInterval  
+const intervalId = setInterval(sayHello, 1000);  
+// Stop the interval after 5 seconds using clearInterval  
+setTimeout(function() {  
+Prepared by: AJM  
+KTSS 
+ 96 clearInterval(intervalId);  
+console.log("Interval stopped."); }, 5000);  
+In this example, we first define the `sayHello()` function, which logs the message "Hello, 
+World!" to the console.  
+Then, we use the `setInterval()` method to call the `sayHello()` function every 1 second. The 
+`setInterval()` method returns an interval ID, which is stored in the `intervalId` variable.  
+Next, we use the `setTimeout()` method to schedule the execution of another function after 5 
+seconds. Inside that function, we call `clearInterval(intervalId)` to stop the interval execution. 
+We also log a message to the console indicating that the interval has been stopped . 
+Example: 2  
+<!DOCTYPE html> <html>  
+<body> 
+<h1>The Window Object</h1>  
+<h2>The setInterval() and clearInterval() Methods</h2>  
+<p>In this example, the setInterval() method executes the setColor() function once every500 
+milliseconds to toggle between two background colours.</p>  
+<button onclick="stopColor()">Stop Toggling</button>  
+<script> myInterval = setInterval(setColor, 500); function setColor() { let x = document.body;  
+x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow"; }  
+function stopColor() { clearInterval(myInterval); }  
+</script> </body> </html>  
+● setTimeout()  
+Example: Display an alert box after 3 seconds (3000 milliseconds): let timeout; function 
+myFunction() { timeout = setTimeout(alertFunc, 3000);  
+}  
+function alertFunc() {  
+alert("Hello!"); }  
+● clearTimeout()  
+Example: How to prevent myGreeting() to execute:  
+const myTimeout = setTimeout(myGreeting, 3000);  
+function myGreeting() {  
+document.getElementById("demo").innerHTML = "Happy Birthday to You !!" }  
+Prepared by: AJM  
+KTSS 
+ 97 function myStopFunction() { clearTimeout(myTimeout); }  
+● open() 
+Example: Open an about:blank page in a new window/tab:  
+var myWindow = window.open("", "", "width=200,height=100");  
+confirm() 
+Example: Confirmation box with line-breaks:  
+confirm("Press a button!\nEither OK or Cancel.");  
+● close()  
+Here's an example that demonstrates how to use the `close()` method:  
+// Close the current window  
+window.close();  
+In this example, the `close()` method is called on the `window` object. When this code runs, it 
+will close the current window or tab.  
+Please note that the `close()` method has certain restrictions due to security reasons. It can only 
+be called on windows or tabs that were opened by a script using the `window.open()` method. 
+If the window or tab was not opened by a script, attempting to close it using `window.close()` 
+may not work or may prompt a confirmation dialog to the user.  
+Also, some modern browsers may prevent the use of `window.close()` if it is not triggered by a 
+user action, such as a button click. This is to prevent malicious websites from automatically 
+closing browser windows without user consent.  
+Example:2  
+function openWin() {  
+myWindow = window.open("https://www.w3schools.com", "_blank", "width=200, 
+height=100");  
+} function closeWin() { myWindow.close(); }  
+●stop() 
+Example:  
+<!DOCTYPE html> <html>  
+<script> window.stop(); </script> <body>  
+<h1>The Window Object</h1> <h2>The stop() Method</h2>  
+<p>The stop() method stops this document from loading.</p> </body>  
+</html> 
+Prepared by: AJM  
+KTSS 
+ 98 ● print() 
+Example: Print the current page: window.print();  
+✓JavaScript form validation  
+To apply JavaScript form validation, follow these steps:  
+1. Access the form:  Use the appropriate method to access the HTML form element in 
+JavaScript. You can use methods like `getElementById()`, `querySelector()`, or 
+`querySelectorAll()` to select the form element.  
+2. Add an event listener:  Attach an event listener to the form element to listen for form 
+submissions or specific events like `submit` or `click`. This will allow you to trigger the 
+validation function when the form is submitted or a specific event occurs.  
+3. Create a validation function : Write a JavaScript function that will handle the form 
+validation. This function should be called when the form is submitted or the desired event 
+occurs. Inside the validation function, you can access the form elements and perform the 
+necessary validation checks.  
+4. Perform validation checks : Within the validation function, access the form elements using 
+their names, IDs, or classes. Use JavaScript methods and properties to perform the desired 
+validation checks on the form inputs. Common validation checks include checking for empty 
+fields, validating email addresses, verifying password strength, or validating numeric input.  
+5. Display error messages: If any validation checks fail, display error messages to the user. 
+This can be done by adding error messages to the HTML document, modifying the CSS styles 
+of the form elements, or using JavaScript methods like `alert()` or `console.log()` to display the 
+error messages.  
+6. Prevent form submission (optional): If you want to prevent the form from being submitted 
+when validation fails, use the `event.preventDefault()` method within the validation function. 
+This will stop the form submission and allow you to display error messages or prompt the user 
+to correct the input.  
+Here's a simplified example that demonstrates JavaScript form validation:  
+<form id="myForm">  
+<input type="text" id="name" required>  
+<input type="email" id="email" required>  
+<button type="submit">Submit</button>  
+</form> <script>  
+const form = document.getElementById("myForm");  
+form.addEventListener("submit", function(event) {  
+event.preventDefault(); // Prevent form submission  
+Prepared by: AJM  
+KTSS 
+ 99 // Perform form validation  
+const nameInput = document.getElementById("name");  
+const emailInput = document.getElementById("email");  
+if (nameInput.value === "") {  
+alert("Please enter your name.");  
+return; 
+} 
+if (emailInput.value === "") {  
+alert("Please enter your email address.");  
+return; 
+} 
+// If validation passes, submit the form  
+form.submit();  
+}); </script>’’’  
+In this example, we access the form element using `getElementById()` and attach a `submit` 
+event listener to it. When the form is submitted, the validation function is called.  
+Here is code example 2 for validating form data:  
+<!DOCTYPE html> <html lang="en"> <head>  
+<meta charset="UTF-8">  
+<title>JavaScript Form validation</title>  
+<link rel="stylesheet" href="/examples/css/form-style.css">  
+<script> 
+// Defining a function to display error message function  
+printError(elemId, hintMsg) {  
+document.getElementById(elemId).innerHTML = hintMsg; }  
+// Defining a function to validate form function  
+validateForm() {  
+// Retrieving the values of form elements  
+var name = document.contactForm.name.value;  
+var email = document.contactForm.email.value;  
+Prepared by: AJM  
+KTSS 
+ 100 var mobile = document.contactForm.mobile.value;  
+var country = document.contactForm.country.value;  
+var gender = document.contactForm.gender.value;  
+var hobbies = [];  
+var checkboxes = document.getElementsByName("hobbies[]");  
+for(var i=0; i < checkboxes.length; i++) {  
+if(checkboxes[i].checked) {  
+// Populate hobbies array with selected values  
+hobbies.push(checkboxes[i].value);  
+} } 
+// Defining error variables with a default value  
+var nameErr = emailErr = mobileErr = countryErr = genderErr = true;  
+// Validate name  
+if(name == "") {  
+printError("nameErr", "Please enter your name");  
+} else { 
+var regex = /^[a-zA-Z\s]+$/;  
+if(regex.test(name) === false) {  
+printError("nameErr", "Please enter a valid name");  
+} else { 
+printError("nameErr", "");  
+nameErr = false;  
+} 
+// Validate email address  
+if(email == "") {  
+printError("emailErr", "Please enter your email address");  
+} else { 
+// Regular expression for basic email validation  
+var regex = /^\S+@\S+\.\S+$/;  
+if(regex.test(email) === false) {  
+Prepared by: AJM  
+KTSS 
+ 101 printError("emailErr", "Please enter a valid email address");  
+} else{ 
+printError("emailErr", "");  
+emailErr = false;  
+} } 
+// Validate mobile number if(mobile == "") {  
+printError("mobileErr", "Please enter your mobile number");  
+} else { 
+var regex = /^[1-9]\d{9}$/;  
+if(regex.test(mobile) === false) {  
+printError("mobileErr", "Please enter a valid 10 digit mobile number");  
+} else{ 
+printError("mobileErr", "");  
+mobileErr = false;  
+} } 
+// Validate country  
+if(country == "Select") {  
+printError("countryErr", "Please select your country");  
+} else { 
+printError("countryErr", "");  
+countryErr = false;  
+} 
+// Validate gender  
+if(gender == "") {  
+printError("genderErr", "Please select your gender");  
+} else { 
+printError("genderErr", "");  
+genderErr = false;  
+} 
+// Prevent the form from being submitted if there are any errors  
+Prepared by: AJM  
+KTSS 
+ 102 if((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {  
+return false;  
+} else { 
+// Creating a string from input data for preview  
+var dataPreview = "You've entered the following details: \n" + "Full Name: " + name + "\n" 
++ "Email Address: " + email + "\n" + "Mobile Number: " + mobile + "\n" + "Country: " + 
+country + "\n" + "Gender: " + gender + "\n"; if(hobbies.length) {  
+dataPreview += "Hobbies: " + hobbies.join(", "); }  
+// Display input data in a dialog box before submitting the form  
+alert(dataPreview);  
+} </script>  
+</head>  
+<body> 
+<form name="contactForm" onsubmit="return validateForm()"  
+action="/examples/actions/confirmation.php" method="post">  
+<h2>Application Form</h2>  
+<div class="row">  
+<label>Full Name</label>  
+<input type="text" name="name"> <div class="error" id="nameErr"></div> </div>  
+<div class="row"> <label>Email Address</label>  
+<input type="text" name="email"> <div class="error" id="emailErr"></div> </div>  
+<div class="row"> <label>Mobile Number</label>  
+<input type="text" name="mobile" maxlength="10"> <div class="error" id="mobileErr"> 
+</div> 
+</div> 
+<div class="row"> <label>Country</label> <select name="country"> 
+<option>Select</option>  
+<option>Rwanda</option>  
+<option>Italy</option>  
+<option>United States</option>  
+<option>United Kingdom</option> </select>  
+Prepared by: AJM  
+KTSS 
+ 103 <div class="error" id="countryErr"></div> </div>  
+<div class="row"> <label>Gender</label> <div class="form-inline">  
+<label><input type="radio" name="gender" value="male"> Male</label>  
+<label><input type="radio" name="gender" value="female"> Female</label></div> 
+<div class="error" id="genderErr"></div>  
+</div>  
+<div class="row">  
+<label>Hobbies <i>(Optional)</i></label>  
+<div class="form-inline">  
+<label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label> 
+<label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label> 
+<label><input type="checkbox" name="hobbies[]" value="music">  
+Music</label></div> </div>  
+<div class="row">  
+<input type="submit" value="Submit">  
+</div> </form> </body> </html>  
+Here is scripting code example for validating URL:  
+<h1 style="color:green;"> GeeksForGeeks </h1>  
+<p id="GFG_UP" style="font-size: 15px; font-weight: bold;"> </p>  
+<button onclick="gfg_Run()">  
+click here </button>  
+<p id="GFG_DOWN" style="color:green; font-size: 20px;  
+font-weight: bold;"> </p>  
+<script> 
+var el_up = document.getElementById("GFG_UP");  
+var el_down = document.getElementById("GFG_DOWN");  
+var expression = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0- 
+9]\.[^\s]{2,}|www\.[a-zA-Z0-9][azA-Z0-9-]+[a-zA-Z0- 
+9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zAZ0- 
+9]+\.[^\s]{2,})/gi; var regex = new RegExp(expression); var url = 'www.geekforgeeksorg';  
+el_up.innerHTML = "URL = '" + url + "'";  
+function gfg_Run() {  var res = "";  
+Prepared by: AJM  
+KTSS 
+ 104 if (url.match(regex)) {  
+res = "Valid URL"; } else {  
+res = "Invalid URL"; }  
+el_down.innerHTML = res; }  
+</script>  
+✓ Apply Canvas  
+To apply Canvas element in JavaScript, follow these steps:  
+1. Create a Canvas element: In your HTML file, create a `<canvas>` element and give it an 
+`id` attribute to uniquely identify it. For example: `<canvas id="myCanvas"></canvas>`  
+2. Access the Canvas element: In your JavaScript code, use the appropriate method (such as 
+`getElementById()` or `querySelector()`) to access the Canvas element and store it in a 
+variable. 
+3. Get the Canvas context: Use the `getContext()` method on the Canvas element to get the 
+rendering context. The rendering context allows you to draw on the Canvas.  
+The most commonly used context is the 2D context, which is obtained by passing the string 
+`"2d"` as an argument to `getContext()`. Store the context in a variable.  
+4. Draw on the Canvas: Use the methods and properties of the CanvasRenderingContext2D 
+object to draw shapes, lines, text, and images on the Canvas. Some commonly used methods 
+include `fillRect()`, `strokeRect()`, `fillText()`, `lineTo()`, `arc()`, and `drawImage()`. Refer to the 
+Canvas API documentation for a complete list of available methods.  
+5. Customize and style the drawings: Use the various properties and methods of the 
+CanvasRenderingContext2D object to customize the appearance of the drawings, such as 
+setting the stroke and fill colors, line widths, font styles, and more.  
+Here's a simple example that demonstrates the basic steps of using the Canvas element in 
+JavaScript:  
+<canvas id="myCanvas"></canvas> <script>  
+const canvas = document.getElementById("myCanvas");  
+const context = canvas.getContext("2d");  
+// Draw a rectangle  
+context.fillStyle = "red";  
+context.fillRect(50, 50, 100, 100);  
+// Draw a line  
+context.strokeStyle = "blue";  
+context.lineWidth = 5;  
+Prepared by: AJM  
+KTSS 
+ 105 context.beginPath();  
+context.moveTo(200, 50);  
+context.lineTo(200, 150);  
+context.stroke();  
+// Draw text  
+context.font = "20px Arial";  
+context.fillStyle = "green";  
+context.fillText("Hello, Canvas!", 250, 100); </script>  
+In this example, we first access the Canvas element with the id `"myCanvas"` using 
+`getElementById()` and store it in the `canvas` variable.  
+Then, we get the 2D rendering context by calling `getContext("2d")` on the `canvas` variable 
+and store it in the `context` variable.  
+Next, we use various methods and properties of the `context` object to draw a red rectangle, 
+a blue line, and green text on the Canvas.  
+● Draw a Line  
+<script> 
+var c = document.getElementById("myCanvas");  
+var ctx = c.getContext("2d");  
+ctx.moveTo(0, 0); ctx.lineTo(200,100);  
+ctx.stroke(); </script>  
+● Draw a Circle  
+<script> 
+var c = document.getElementById("myCanvas");  
+var ctx = c.getContext("2d");  
+ctx.beginPath();  
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);  
+ctx.stroke(); </script>  
+● Draw a Text  
+<script> 
+var c = document.getElementById("myCanvas");  
+var ctx = c.getContext("2d");  
+Prepared by: AJM  
+KTSS 
+ 106 ctx.font = "30px Arial";  
+ctx.fillText("Hello World", 10, 50); </script>  
+● Stroke Text  
+<script> 
+var c = document.getElementById("myCanvas");  
+var ctx = c.getContext("2d");  
+ctx.font = "30px Arial";  
+ctx.strokeText("Hello World", 10, 50); </script>  
+● Draw Linear Gradient  
+<script> 
+var c = document.getElementById("myCanvas");  
+var ctx = c.getContext("2d");  
+// Create gradient  
+var grd = ctx.createLinearGradient(0, 0, 200, 0);  
+grd.addColorStop(0, "red");  
+grd.addColorStop(1, "white");  
+// Fill with gradient  
+ctx.fillStyle = grd;  
+ctx.fillRect(10, 10, 150, 80); </script>  
+● Draw Circular Gradient  
+<script> 
+var c = document.getElementById("myCanvas");  
+var ctx = c.getContext("2d");  
+// Create gradient  
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);  
+grd.addColorStop(0, "red");  
+grd.addColorStop(1, "white");  
+// Fill with gradient  
+ctx.fillStyle = grd;  
+ctx.fillRect(10, 10, 150, 80);  
+Prepared by: AJM  
+KTSS 
+ 107 </script>  
+● Draw Image  
+<script> 
+var c = document.getElementById("myCanvas"); var ctx = c.getContext("2d");  
+var img = document.getElementById("scream"); ctx.drawImage(img, 10, 10); </script>  
+JavaScript HTML DOM  
+The Document Object Model (DOM) is the data representation of the objects that comprise the 
+structure and content of a document on the web.  
+● innerHTML  
+The innerHTML property sets or returns the HTML content (inner HTML) of an element.  
+Example 
+Get the HTML content of an element with id="myP":  
+let html = document.getElementById("myP").innerHTML;  
+Change the HTML content of an element with id="demo":  
+document.getElementById("demo").innerHTML = "I have changed!";  
+● getElementById  
+Example 
+Get the element with the specified id:  
+document.getElementById("demo");  
+Get the element and change its color:  
+const myElement = document.getElementById("demo");  
+myElement.style.color = "red";  
+Or just change its color:  
+document.getElementById("demo").style.color = "red";  
+• getElementsByClassName  
+Example 
+Get all elements with class="example":  
+const collection = document.getElementsByClassName("example");  
+Get all elements with both the "example" and "color" classes:  
+const collection = document.getElementsByClassName("example color");  
+Prepared by: AJM  
+KTSS 
+ 108 ● getElementsByClassName  
+Example 
+Get all elements with the name "fname":  
+let elements = document.getElementsByName("fname"); Number of elements with 
+name="animal":  
+let num = document.getElementsByName("animal").length;  
+● getElementsByTagName  
+Example:  
+Get all elements with the tag name "li":  
+const collection = document.getElementsByTagName("li");  
+Get all elements in the document:  
+const collection = document.getElementsByTagName("*");  
+Change the inner HTML of the first element in the document: 
+document.getElementsByTagName("p")[0].innerHTML = "Hello World!";  
+● querySelector  
+Examples:  
+Get the first <p> element:  
+document.querySelector("p");  
+Get the first element with class="example":  
+document.querySelector(".example");  
+● querySelectorAll  
+Example 
+Select all elements with class="example":  
+document.querySelectorAll(".example");  
+✓ JavaScript HTML styles  
+● Animation  
+Here is code example:  
+<html> <head>  
+<title>JavaScript Animation</title>  
+<script type = "text/javascript"> <!--  
+Prepared by: AJM  
+KTSS 
+ 109 var imgObj = null;  
+var animate ;  
+function init() {  
+imgObj = document.getElementById('myImage');  
+imgObj.style.position= 'relative';  
+imgObj.style.left = '0px';  
+} 
+function moveRight() {  
+imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';  
+animate = setTimeout(moveRight,20); // call moveRight in 20msec  
+} 
+function stop() { clearTimeout(animate);  
+imgObj.style.left = '0px'; }  
+window.onload = init;  
+//--> </script> </head> <body> <form>  
+<img id = "myImage" src = "/images/html.gif" />  
+<p>Click the buttons below to handle animation</p>  
+<input type = "button" value = "Start" onclick = "moveRight();" />  
+<input type = "button" value = "Stop" onclick = "stop();" />  
+</form> 
+</body> </html>  
+• Transition  
+A transition is a change from one thing to the next, either in action or state of being.  
+<!DOCTYPE html>  
+<html> <head> <style>  
+#myDIV {  
+border: 1px solid black;  
+background-color: lightblue;  
+width: 270px;  
+height: 200px;  
+Prepared by: AJM  
+KTSS 
+ 110 overflow: auto;  
+} 
+#myDIV:hover {  
+background-color: coral;  
+width: 570px;  
+height: 500px;  
+padding: 100px;  
+border-radius: 50px;  
+} </style> </head> <body>  
+<p>Mouse over the DIV element and it will change, both in color and size!</p>  
+<p>Click the "Try it" button and mouse over the DIV element again. The change will  
+now happen gradually, like an animation:</p>  
+<button onclick="myFunction()">Try it</button>  
+<div id="myDIV">  
+<h1>myDIV</h1>  
+</div> <script>  
+function myFunction() {  
+document.getElementById("myDIV").style.transition = "all 2s";  
+} </script> </body> </html>  
+• Slide show  
+Simple code example:  
+<!DOCTYPE html> <html>  
+<head> 
+<title>JavaScript Slideshow Demo</title> </head>  
+<body> 
+<div> <img id="image1" /> </div>  
+<script>  
+var imgArray = [  
+'images/image1.jpg',  
+'images/image2.jpg',  
+Prepared by: AJM  
+KTSS 
+ 111 'images/image3.jpg' ];  
+var curIndex = 0;  
+var imgDuration = 5000;  
+function slideShow() { document.getElementById('image1').src = imgArray[curIndex]; 
+curIndex++;  
+if (curIndex == imgArray.length) { curIndex = 0;  
+}  
+setTimeout("slideShow()", imgDuration);  
+} slideShow();  
+</script>  
+</body>  
+</html> 
+ 
+Indicative content 2.8: Applying regular expressions  
+2.8.1: Description of regular expressions in JavaScript  
+Regular expressions are patterns used to match character combinations in strings.  
+• Modifiers  
+The JavaScript regular expression modifiers are optional parts of a regular expression and 
+allow us to perform case insensitive and global searchers.  
+In JavaScript, "case-insensitive" means that  a comparison or operation treats uppercase and 
+lowercase letters as the same  (e.g., "Hello" and "hello" are considered equal). By default, 
+JavaScript is a case-sensitive language, meaning that  myVar and myvar are treated as two 
+distinct variables.  
+The modifiers can also be combined together. Following are the modifiers  
+Modifier  Description  
+G  It enables global matching and returns all the 
+matched results instead of stopping at first match  
+I  It enables case insensitive matching  
+M  It enables multiline matching  
+ 
+Examples:  
+ Global (/pattern/g):  Let str = "A, a, A"; str.match(/a/g)  returns ['a']. 
+Prepared by: AJM  
+KTSS 
+ 112  Global + Ignore Case (/pattern/gi):  Let str = "A, a, A"; str.match(/a/gi)  returns ['A', 
+'a', 'A']. 
+ Multiline (/pattern/m):  var regex = /^Start/m;  matches "Start" at the beginning of a 
+string, or immediately after a newline character.  
+Brackets 
+Brackets are used to find a range of characters:  
+Expression  Description  
+[abc]  Find any character between the brackets  
+[^abc]  Find any character NOT between the brackets  
+[0-9]  Find any character between the brackets (any digit)  
+[^0-9]  Find any character NOT between the brackets (any non -digit) 
+(x|y)  Find any of the alternatives specified  
+• Group 
+What is Group in Regex?  
+A group is a part of a regex pattern enclosed in parentheses () metacharacter. We create a 
+group by placing the regex pattern inside the set of parentheses ( and ) .  
+For example, the regular expression (cat) creates a single group containing the letters 'c', 'a', 
+and 't'. 
+ 
+Metacharacters  
+Metacharacters are characters that are interpreted in a special way by a RegEx engine. 
+Here's a list of metacharacters:  
+[] . ^ $ * + ? {} () \ | [] - Square brackets  
+Square brackets specify a set of characters you wish to match. . –Period 
+A period matches any single character (except newline '\n').  
+
+Prepared by: AJM  
+KTSS 
+ 113 ^ - Caret 
+The caret symbol ^ is used to check if a string starts with a certain character.  
+$ - Dollar  
+The dollar symbol $ is used to check if a string ends with a certain character  
+* - Star 
+The star symbol * matches zero or more occurrences of the pattern left to it.  
++ - Plus 
+The plus symbol + matches one or more occurrences of the pattern left to it.  
+? - Question Mark  
+The question mark symbol ? matches zero or one occurrence of the pattern left to it.  
+{} – Braces  
+Consider this code: {n,m}. This means at least n, and at most m repetitions of the pattern left to 
+it. 
+| - Alternation  
+Vertical bar | is used for alternation (or operator).  
+() – Group  
+Parentheses () is used to group sub-patterns. For example, (a|b|c)xz match any string that 
+matches either a or b or c followed by xz  
+\ - Backslash  
+Backslash \ is used to escape various characters including all metacharacters. For example,  
+\$a match if a string contains $ followed by a. Here, $ is not interpreted by a RegEx engine 
+in a special way.  
+If you are unsure if a character has special meaning or not, you can put \ in front of it. This 
+makes sure the character is not treated in a special way.  
+Special Sequences  
+Special sequences make commonly used patterns easier to write. Here's a list of special 
+sequences:  
+\A - Matches if the specified characters are at the start of a string.  
+\b - Matches if the specified characters are at the beginning or end of a word.  
+\B - Opposite of \b. Matches if the specified characters are not at the beginning or end of a 
+word. 
+\d - Matches any decimal digit. Equivalent to [0-9]  
+Prepared by: AJM  
+KTSS 
+ 114 \D - Matches any non-decimal digit. Equivalent to [^0-9]  
+\s - Matches where a string contains any whitespace character. Equivalent to [ \t\n\r\f\v].  
+\S - Matches where a string contains any non-whitespace character. Equivalent to [^ 
+\t\n\r\f\v].  
+\w - Matches any alphanumeric character (digits and alphabets). Equivalent to [a-zA-Z0- 9_]. 
+By the way, underscore _ is also considered an alphanumeric character.  
+\W - Matches any non-alphanumeric character. Equivalent to [^a-zA-Z0-9_]  
+\Z - Matches if the specified characters are at the end of a string.  
+• Quantifiers  
+Quantifiers specify how many instances of a character, group, or character class must be 
+present in the input for a match to be found.  
+Quantifier  Description  
+n+  Matches any string that contains at least one n 
+n*  Matches any string that contains zero or more occurrences of n 
+n?  Matches any string that contains zero or one occurrences of n 
+n{X}  Matches any string that contains a sequence of X n's 
+n{X,Y}  Matches any string that contains a sequence of X to Y n's 
+n{X,}  Matches any string that contains a sequence of at least X n's 
+n$  Matches any string with n at the end of it  
+^n  Matches any string with n at the beginning of it  
+?=n  Matches any string that is followed by a specific string n 
+?!n  Matches any string that is not followed by a specific string n 
+ 
+ 
+2.8.2: Apply regular expressions in JavaScript  
+Regular expressions are used with the RegExp methods test() and exec() and with  
+the String methods match(), replace(), search(), and split().  
+Method  Description  
+exec()  Executes a search for a match in a string. It returns an array of information or 
+null on a mismatch.  
+test()  Tests for a match in a string. It returns true or false.  
+Prepared by: AJM  
+KTSS 
+ 115 match()  Returns an array containing all of  the matches, including capturing groups, or 
+null if no match is found.  
+matchAll()  Returns an iterator containing all of the matches, including capturing groups.  
+search()  Tests for a match in a string. It returns the index of the match, or -1 if the 
+search fails.  
+replace()  Executes a search for a match in a string, and replaces the matched substring 
+with a replacement substring.  
+replaceAll()  Executes a search for all matches in a string, and  replaces the matched 
+substrings with a replacement substring.  
+split()  Uses a regular expression or a fixed string to break a string into an array of 
+substrings.  
+ 
+When you want to know whether a pattern is found in a string, use the test() or search() 
+methods; for more information (but slower execution) use the exec() or match() methods.  
+If you use exec() or match() and if the match succeeds, these methods return an array and 
+update properties of the associated regular expression object and also of the predefined 
+regular expression object, RegExp.  
+If the match fails, the exec() method returns null (which coerces to false)  
+Using String Methods:  
+In JavaScript, regular expressions are often used with the two string methods: search() and 
+replace(). 
+• The search() method uses an expression to search for a match and returns the position of the 
+match. 
+• The replace() method returns a modified string where the pattern is replaced.  
+Using String search() With a Regular Expression: Use a regular expression to do a 
+caseinsensitive search for “GeeksforGeeks” in a string:  
+ 
+Example:  
+function myFunction() { // input string  
+let str = "Visit geeksforGeeks!"; // searching string with modifier i let n = 
+str.search(/GeeksforGeeks/i); console.log(n);  
+// searching string without modifier i let n = str.search(/GeeksforGeeks/); console.log(n);  
+} myFunction();  
+Output: 
+Prepared by: AJM  
+KTSS 
+ 116 6 
+-1 
+Use String replace() With a Regular Expression :  
+Use a case insensitive regular expression to replace gfG with GeeksforGeeks in a string:  
+Example:  
+function myFunction() {  
+// input string  
+let str = "Please visit gfG!";  
+// replacing with modifier i  
+let txt = str.replace(/gfg/i, "geeksforgeeks"); console.log(txt);  
+} myFunction();  
+Output: 
+Please visit geeksforgeeks!  
+Another example:  
+<html> 
+<body> <p id="demo"></p> <script>  
+let text = "Visit W3Schools"; let pattern = /w3schools/i;  
+let result = text.match(pattern);  
+document.getElementById("demo").innerHTML = result;  
+</script> </body> </html>  
+ 
+ 
+ 
+Output:Example explained:  
+w3schools  The pattern to search for  
+/w3schools/  A regular expression  
+/w3schools/i  A case-insensitive regular expression  
+ 
+Indicative content 2.9: Error handling  
+2.9.1: identification of error handling in JavaScript  
+Prepared by: AJM  
+KTSS 
+ 117 ● Error handling  
+Errors are statements that don't let the program run properly.  
+JavaScript code can encounter different errors when it is executed. Errors can be caused by 
+programming mistakes, incorrect input, or other unforeseeable events.  
+Javascript error handling is a strategy that handles the errors or exceptions which occur at 
+runtime. 
+✔ Types of error  
+The following are the 7 types of errors in JavaScript:  
+1. Syntax error - The error occurs when you use a predefined syntax incorrectly.  
+2. Reference Error - In a case where a variable reference can't be found or hasn't been 
+declared, then a Reference error occurs.  
+3. Type Error - An error occurs when a value is used outside the scope of its data type.  
+4. Evaluation Error - Current JavaScript engines and EcmaScript specifications do not throw 
+this error. However, it is still available for backward compatibility. The error is called when 
+the eval() backward function is used, as shown in the following code block:  
+5. RangeError - There is an error when a range of expected values is required.  
+6. URI Error - When the wrong character(s) are used in a URI function, the error is called.  
+7. Internal Error - In the JS engine, this error occurs most often when there is too much data 
+and the stack exceeds its critical size. When there are too many recursion patterns, switch 
+cases, etc., the JS engine gets overwhelmed.  
+✔ Try & catch  
+The try statement allows you to define a block of code to be tested for errors while it is being 
+executed.  
+The catch statement  
+allows you to define a block of code to be executed, if an error occurs in the try block. The 
+JavaScript statements try and catch come in pairs:  
+Syntax: 
+try { 
+Block of code to try  
+} catch(err) { 
+Block of code to handle errors  
+}  
+✔ Thrown 
+Prepared by: AJM  
+KTSS 
+ 118 When an error occurs, JavaScript will normally stop and generate an error message. The 
+technical term for this is: JavaScript will throw an exception (throw an error). JavaScript will 
+actually create an Error object with two properties: name and message.  
+The throw Statement  
+The throw statement allows you to create a custom error. Technically you can throw an 
+exception (throw an error).  
+The exception can be a JavaScript String, a Number, a Boolean or an Object: throw "Too 
+big"; // throw a text  
+throw 500; // throw a number  
+If you use throw together with try and catch, you can control program flow and generate 
+custom error messages.  
+2.9.2: handling error in JavaScript  
+● Error handling  
+Example of an error  
+<!DOCTYPE html>  
+<html> 
+<body> 
+<h2>JavaScript Error Handling</h2>  
+<p>This example demonstrates how to use <b>catch</b> </b> to display an error.</p> 
+<p id="demo"></p>  
+<script> try {  
+adddlert("Welcome guest!");  
+} 
+catch(err) {  
+document.getElementById("demo").innerHTML = err.message;  
+} 
+</script> </body> </html>  
+Output: 
+JavaScript Error Handling  
+This example demonstrates how to use catch to display an error. adddlert is not defined  
+Note: JavaScript catches adddlert as an error, and executes the catch code to handle it.  
+✔ Types of error 1. Syntax error  
+Prepared by: AJM  
+KTSS 
+ 119 const func = () => console.log(hello) }  
+Output: 
+} ^ 
+SyntaxError: Unexpected token }  
+In the above example, an opening bracket is missing in the code, which invokes the Syntax 
+error constructor.  
+2. Reference Error  
+console.log(x);  
+Output: 
+console.log(x); ^  
+ReferenceError: x is not defined  
+3. Type Error  
+let num = 15;  
+console.log(num.split("")); //converts a number to an array  
+Output: 
+console.log(num.split("")); //converts a number to an array ^  
+TypeError: num.split is not a function  
+4. Evaluation Error  
+try{ 
+throw new EvalError("'Throws an error'") }catch(error){  
+console.log(error.name, error.message) }  
+Output: 
+EvalError 'Throws an error'  
+5. RangeError  
+const checkRange = (num)=>{  
+if (num < 30) throw new RangeError("Wrong number");  
+return true }  
+checkRange(20);  
+Output: 
+if (num < 30) throw new RangeError("Wrong number"); ^  
+Prepared by: AJM  
+KTSS 
+ 120 RangeError: Wrong number  
+6. URI Error  
+console.log(decodeURI("https://www.educative.io/shoteditor")) 
+console.log(decodeURI("%sdfk"));  
+Output: 
+console.log(decodeURI("%sdfk"));  
+URIError: URI malformed  
+7. Internal Error  
+switch(condition) {  
+case 1: 
+break  
+case 2:  
+break  
+case 3:  
+break  
+case 4:  
+break  
+case 5:  
+break  
+case 6:  
+break  
+case 7:  
+break 
+up to 500  
+cases } 
+Output: Its output will be like InternalError.  
+ 
+ 
+ 
+ 
+Prepared by: AJM  
+KTSS 
+ 121  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Learning Outcome 3: Apply JavaScript in Project  
+Indicative content 3.1: Apply JavaScript in Project  
+3.1.1: Description of JavaScript project environment  

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Learning Lab | Interactive Examples</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">JS<span>Lab</span></div>
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-module="home">
+                    <span class="icon">🏠</span> Home
+                </li>
+                <li data-module="dom-deep-dive">
+                    <span class="icon">🔍</span> DOM Deep Dive
+                </li>
+                <li data-module="dom-events">
+                    <span class="icon">⚡</span> Events & Propagation
+                </li>
+                <li data-module="animation-lab">
+                    <span class="icon">🎞️</span> Animation & Slideshow
+                </li>
+                <li data-module="window-obj">
+                    <span class="icon">🪟</span> Window Object
+                </li>
+                <li data-module="validation">
+                    <span class="icon">🛡️</span> Form Validation
+                </li>
+                <li data-module="canvas">
+                    <span class="icon">🎨</span> Canvas Graphics
+                </li>
+                <li data-module="regex">
+                    <span class="icon">🔍</span> Regular Expressions
+                </li>
+                <li data-module="errors">
+                    <span class="icon">⚠️</span> Error Handling
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                Prepared by AJM (KTSS)
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <header class="main-header">
+                <h1 id="module-title">Welcome to JS Learning Lab</h1>
+                <p id="module-description">Select a module from the sidebar to start learning with interactive examples based on the JS Course Notes.</p>
+            </header>
+
+            <div id="module-container" class="module-view">
+                <!-- Content will be dynamically injected here -->
+                <div class="welcome-screen">
+                    <div class="card glass">
+                        <h2>Exploration Guide</h2>
+                        <p>This interactive lab covers Learning Outcome 2.7, 2.8, and 2.9 of your JavaScript curriculum.</p>
+                        <div class="topics-grid">
+                            <div class="topic-item">
+                                <h3>2.7: JavaScript in HTML</h3>
+                                <p>Events, Listeners, Window Object, and Validation.</p>
+                            </div>
+                            <div class="topic-item">
+                                <h3>2.8: RegEx</h3>
+                                <p>Patterns, Modifiers, and String methods.</p>
+                            </div>
+                            <div class="topic-item">
+                                <h3>2.9: Error Handling</h3>
+                                <p>Try/Catch, Throw, and Error types.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
