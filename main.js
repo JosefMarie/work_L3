@@ -558,14 +558,100 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'regex': {
             title: 'RegEx Lab',
-            description: 'Pattern combinations.',
-            render: () => renderExample('re', 'Live Matcher', `
-                <input type="text" id="re-in" value="Search me!">
-                <button class="btn" onclick="alert(/search/i.test(document.getElementById('re-in').value))">Test /search/i</button>
-            `,
-            "Regular expressions are patterns used to match character combinations in strings.",
-            "const pattern = /search/i;\nconst result = pattern.test(str);"),
-            init: () => {}
+            description: 'Learn to search, validate, and extract patterns from text.',
+            render: () => {
+                let html = '';
+
+                // 1. Basic Test
+                html += renderExample('re-base', '1. Basic Search (.test())', `
+                    <p>Does the text contain the word "hello" (case-insensitive)?</p>
+                    <input type="text" id="re-test-in" value="Hello World!" style="width:100%; margin-bottom:10px;">
+                    <button id="btn-re-test" class="btn">Test Pattern</button>
+                    <div id="out-re-test" class="display-box" style="margin-top:10px;">Waiting...</div>
+                `,
+                "The <code>test()</code> method returns true if it finds a match. The <code>/i</code> flag makes it case-insensitive.",
+                "const str = 'Hello World';\nconst pattern = /hello/i;\nconsole.log( pattern.test(str) ); // true");
+
+                // 2. Character Classes
+                html += renderExample('re-class', '2. Character Classes (\\d for digits)', `
+                    <p>Extract all numbers from this messy string:</p>
+                    <input type="text" id="re-num-in" value="Order 123 arrived on 05/10." style="width:100%; margin-bottom:10px;">
+                    <button id="btn-re-num" class="btn">Extract Numbers</button>
+                    <div id="out-re-num" class="display-box" style="margin-top:10px;">Waiting...</div>
+                `,
+                "The <code>\\d</code> selector matches any digit (0-9). The <code>/g</code> flag means 'global search' (find all matches, not just the first).",
+                "const str = 'Order 123';\nconst pattern = /\\d/g;\nconsole.log( str.match(pattern) ); // ['1','2','3']");
+
+                // 3. Quantifiers
+                html += renderExample('re-quant', '3. Quantifiers & Anchors (Zip Code)', `
+                    <p>Validate a 5-digit US Zip Code:</p>
+                    <input type="text" id="re-zip-in" placeholder="Enter zip code..." style="width:100%; margin-bottom:10px;">
+                    <button id="btn-re-zip" class="btn">Validate Zip</button>
+                    <div id="out-re-zip" class="display-box" style="margin-top:10px;">Waiting...</div>
+                `,
+                "<code>^</code> means start of string, <code>$</code> means end. <code>{5}</code> means exactly 5 times. So <code>^\\d{5}$</code> ensures it is exactly and only five digits.",
+                "const pattern = /^\\d{5}$/;\nconsole.log( pattern.test('12345') ); // true");
+
+                // 4. Replace
+                html += renderExample('re-rep', '4. Global Replace (.replace())', `
+                    <p>Replace every occurrence of "bad" with "good":</p>
+                    <textarea id="re-rep-in" style="width:100%; height:60px; margin-bottom:10px; padding:10px; background:rgba(255,255,255,0.05); color:white; border:1px solid #334155; border-radius:8px;">This is a bad idea. Very bad indeed.</textarea>
+                    <button id="btn-re-rep" class="btn btn-outline">Censor Text</button>
+                    <div id="out-re-rep" class="display-box" style="margin-top:10px;">Waiting...</div>
+                `,
+                "The <code>replace()</code> method swaps matched patterns with new text. Without the <code>/g</code> flag, only the first match is replaced.",
+                "const str = 'bad dog, bad cat';\nconst clean = str.replace(/bad/g, 'good');\n// 'good dog, good cat'");
+
+                return html;
+            },
+            init: () => {
+                // 1. Basic Test
+                document.getElementById('btn-re-test').onclick = () => {
+                    const input = document.getElementById('re-test-in').value;
+                    const result = /hello/i.test(input);
+                    const out = document.getElementById('out-re-test');
+                    out.innerText = result ? "Match found! (true)" : "No match! (false)";
+                    out.style.color = result ? "#10b981" : "#ef4444";
+                };
+
+                // 2. Character Classes
+                document.getElementById('btn-re-num').onclick = () => {
+                    const input = document.getElementById('re-num-in').value;
+                    const matches = input.match(/\d/g);
+                    const out = document.getElementById('out-re-num');
+                    if (matches) {
+                        out.innerText = "Found numbers: " + matches.join(', ');
+                        out.style.color = "#10b981";
+                    } else {
+                        out.innerText = "No numbers found.";
+                        out.style.color = "#ef4444";
+                    }
+                };
+
+                // 3. Quantifiers
+                document.getElementById('btn-re-zip').onclick = () => {
+                    const input = document.getElementById('re-zip-in').value;
+                    const pattern = /^\d{5}$/;
+                    const isValid = pattern.test(input);
+                    const out = document.getElementById('out-re-zip');
+                    if (isValid) {
+                        out.innerText = "Valid Zip Code! (true)";
+                        out.style.color = "#10b981";
+                    } else {
+                        out.innerText = "Invalid Zip Code! Must be exactly 5 numbers. (false)";
+                        out.style.color = "#ef4444";
+                    }
+                };
+
+                // 4. Replace
+                document.getElementById('btn-re-rep').onclick = () => {
+                    const input = document.getElementById('re-rep-in').value;
+                    const cleanText = input.replace(/bad/g, 'good');
+                    const out = document.getElementById('out-re-rep');
+                    out.innerText = cleanText;
+                    out.style.color = "#10b981";
+                };
+            }
         },
         'errors': {
             title: 'Error Handling Lab',
