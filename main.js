@@ -68,6 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <input type="text" id="sel-input" value=".logo">
                         <button id="sel-run" class="btn">querySelector()</button>
                     </div>
+                    <div style="margin-top: 10px; font-size: 0.85em; color: #a1a1aa;">
+                        <strong>Try these selectors:</strong> 
+                        <code style="cursor:pointer" onclick="document.getElementById('sel-input').value=this.innerText">.logo</code>, 
+                        <code style="cursor:pointer" onclick="document.getElementById('sel-input').value=this.innerText">h2</code>, 
+                        <code style="cursor:pointer" onclick="document.getElementById('sel-input').value=this.innerText">p</code>, 
+                        <code style="cursor:pointer" onclick="document.getElementById('sel-input').value=this.innerText">.topic-item</code>, 
+                        <code style="cursor:pointer" onclick="document.getElementById('sel-input').value=this.innerText">button</code>, 
+                        <code style="cursor:pointer" onclick="document.getElementById('sel-input').value=this.innerText">#module-title</code>
+                    </div>
                 `, 
                 "The <code>querySelector()</code> method returns the first element that matches a specified CSS selector. <code>querySelectorAll()</code> returns all matches.",
                 "const el = document.querySelector('.logo');\nel.classList.add('highlight-flash');");
